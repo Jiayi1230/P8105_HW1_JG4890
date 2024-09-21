@@ -49,6 +49,16 @@ df <- data.frame(
 print(df)
 ```
 
-
+## Calculate the means
+```{r}
+mean_normal <- mean(pull(df, normal_sample))
+mean_logical <- mean(pull(df, logical_greater_than_0))
+mean_character <- mean(pull(df, character))  
+mean_factor <- mean(pull(df, factor))        
+```
+Mean of normal_sample works because it’s numeric.
+Mean of logical_greater_than_0 works because logical values are coerced to numeric (TRUE becomes 1 and FALSE becomes 0).
+Mean of character produces an error because character data cannot be coerced to numeric directly.
+Mean of factor also produces an error because factors must be converted to numeric properly (they represent levels, not direct values).
 
 
