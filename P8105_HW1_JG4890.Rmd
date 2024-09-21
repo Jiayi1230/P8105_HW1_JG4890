@@ -61,4 +61,16 @@ Mean of logical_greater_than_0 works because logical values are coerced to numer
 Mean of character produces an error because character data cannot be coerced to numeric directly.
 Mean of factor also produces an error because factors must be converted to numeric properly (they represent levels, not direct values).
 
+## Convert variables
+```{r}
+numeric_logical <- as.numeric(df$logical_greater_than_zero)
+numeric_character <- as.numeric(df$character)  
+numeric_factor <- as.numeric(df$factor)     
 
+print(numeric_logical)
+print(numeric_character)
+print(numeric_factor)
+```
+Logical to Numeric: Converts TRUE to 1 and FALSE to 0.
+Character to Numeric: Produces NA for all values since character strings cannot be converted to numbers.
+Factor to Numeric: Converts to the underlying integer codes for the factor levels (not the actual levels itself).
