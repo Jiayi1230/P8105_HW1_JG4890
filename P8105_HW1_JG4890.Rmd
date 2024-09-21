@@ -67,10 +67,12 @@ numeric_logical <- as.numeric(df$logical_greater_than_zero)
 numeric_character <- as.numeric(df$character)  
 numeric_factor <- as.numeric(df$factor)     
 
-print(numeric_logical)
-print(numeric_character)
-print(numeric_factor)
+#print(numeric_logical)
+#print(numeric_character)
+#print(numeric_factor)
 ```
 Logical to Numeric: Converts TRUE to 1 and FALSE to 0.
 Character to Numeric: Produces NA for all values since character strings cannot be converted to numbers.
 Factor to Numeric: Converts to the underlying integer codes for the factor levels (not the actual levels itself).
+
+Converting variables reveals how R interprets and handles different data types during calculations, so it helps explain what happens when you try to take the mean.
