@@ -3,6 +3,7 @@ title: "P8105_HW1_JG4890"
 output: github_document
 date: "2024-09-21"
 ---
+## Question 1
 ## Import Data
 ```{r}
 data("penguins", package = "palmerpenguins")
@@ -27,3 +28,24 @@ ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)
 ggsave("scatterplot_penguins.png")
 ```
 The scatter plot visualizes the relationship between flipper length(Y-axis) and bill length(X-axis) for different penguin species, with all three species represented in different colors. The graph shows clear differences in these measurements across species. There was some missing information when the scatterplot was saved, so 2 rows with missing values were removed from the dataset before drawing. This ensures that only the complete data points are displayed in the scatter plot.
+
+##Question 2
+
+## Create a data frame
+```{r}
+library(tidyverse)
+set.seed(1)
+sample_normal <- rnorm(10)
+logical_vector <- sample_normal > 0
+character_vector <- LETTERS[1:10]
+factor_vector <- factor(sample(c("Low", "Medium", "High"), 10, replace = TRUE))
+
+df <- data.frame(
+  normal_sample = sample_normal,
+  greater_than_zero = logical_vector,
+  character_values = character_vector,
+  factor_values = factor_vector
+)
+print(df)
+```
+
