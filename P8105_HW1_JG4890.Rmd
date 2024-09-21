@@ -10,6 +10,7 @@ data("penguins", package = "palmerpenguins")
 library(dplyr)
 library(ggplot2)
 ```
+
 ## Data set description
 ```{r}
 n_rows <- nrow(penguins)
@@ -57,8 +58,11 @@ mean_character <- mean(pull(df, character))
 mean_factor <- mean(pull(df, factor))        
 ```
 Mean of normal_sample works because it’s numeric.
+
 Mean of logical_greater_than_0 works because logical values are coerced to numeric (TRUE becomes 1 and FALSE becomes 0).
+
 Mean of character produces an error because character data cannot be coerced to numeric directly.
+
 Mean of factor also produces an error because factors must be converted to numeric properly (they represent levels, not direct values).
 
 ## Convert variables
@@ -72,7 +76,9 @@ numeric_factor <- as.numeric(df$factor)
 #print(numeric_factor)
 ```
 Logical to Numeric: Converts TRUE to 1 and FALSE to 0.
+
 Character to Numeric: Produces NA for all values since character strings cannot be converted to numbers.
+
 Factor to Numeric: Converts to the underlying integer codes for the factor levels (not the actual levels itself).
 
 Converting variables reveals how R interprets and handles different data types during calculations, so it helps explain what happens when you try to take the mean.
