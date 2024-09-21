@@ -26,4 +26,4 @@ ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)
 
 ggsave("scatterplot_penguins.png")
 ```
-
+The scatter plot visualizes the relationship between flipper length(Y-axis) and bill length(X-axis) for different penguin species, with all three species represented in different colors. The graph shows clear differences in these measurements across species. There was some missing information when the scatterplot was saved, so 2 rows with missing values were removed from the dataset before drawing. This ensures that only the complete data points are displayed in the scatter plot.
