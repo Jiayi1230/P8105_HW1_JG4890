@@ -3,27 +3,16 @@ title: "P8105_HW1_JG4890"
 output: github_document
 date: "2024-09-21"
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+Import Data
+```{r}
+data("penguins", package = "palmerpenguins")
+library(dplyr)
+library(ggplot2)
 ```
-
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+Data set description
+```{r}
+n_rows <- nrow(penguins)
+n_cols <- ncol(penguins)
+mean_flipper_length <- mean(penguins$flipper_length_mm, na.rm = TRUE)
 ```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+This dataset has 8 cols and 344 rows in total.The columns contains 8 different variables which are species, island, bill length, flipper length, body mass, and sex. The mean flipper length is 200.92 mm.
