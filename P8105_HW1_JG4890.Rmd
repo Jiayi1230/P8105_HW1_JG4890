@@ -42,10 +42,13 @@ factor_vector <- factor(sample(c("Low", "Medium", "High"), 10, replace = TRUE))
 
 df <- data.frame(
   normal_sample = sample_normal,
-  greater_than_zero = logical_vector,
-  character_values = character_vector,
-  factor_values = factor_vector
+  logical_greater_than_0 = logical_vector,
+  character = character_vector,
+  factor = factor_vector
 )
 print(df)
 ```
+
+
+
 
