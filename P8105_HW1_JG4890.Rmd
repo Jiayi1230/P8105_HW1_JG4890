@@ -17,7 +17,25 @@ n_rows <- nrow(penguins)
 n_cols <- ncol(penguins)
 mean_flipper_length <- mean(penguins$flipper_length_mm, na.rm = TRUE)
 ```
-This dataset has 8 cols and 344 rows in total.The columns contains 8 different variables which are species, island, bill length, bill depth, flipper length, body mass, sex and year. The mean flipper length is 200.92 mm.
+This dataset has 8 cols and 344 rows in total.The columns contains 8 different variables which are species, island, bill length, bill depth, flipper length, body mass, sex and year.
+
+species: 3 species of penguins - Adelie, Gentoo, Chinstrap
+
+island: 3 islands of observed - Torgersen, Biscoe, Dream
+
+bill_length_mm: Range from 32.1 to 59.6
+
+bill_depth_mm: Range from 13.1 to 21.5
+
+flipper_length_mm: Range from 172 to 231
+
+body_mass_g: Range from 2700 to 6300
+
+sex: Male or Female
+
+year: From 2007 to 2009
+
+The mean flipper length is 200.92 mm.
 
 ## Scatterplot
 ```{r}
