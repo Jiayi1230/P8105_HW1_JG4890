@@ -3,17 +3,27 @@ title: "P8105_HW1_JG4890"
 output: github_document
 date: "2024-09-21"
 ---
-Import Data
+## Import Data
 ```{r}
 data("penguins", package = "palmerpenguins")
 library(dplyr)
 library(ggplot2)
 ```
-Data set description
+## Data set description
 ```{r}
 n_rows <- nrow(penguins)
 n_cols <- ncol(penguins)
 mean_flipper_length <- mean(penguins$flipper_length_mm, na.rm = TRUE)
 ```
 This dataset has 8 cols and 344 rows in total.The columns contains 8 different variables which are species, island, bill length, bill depth, flipper length, body mass, sex and year. The mean flipper length is 200.92 mm.
+
+## Scatterplot
+```{r}
+ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) +
+  geom_point() +
+  labs(title = "Flipper Length vs Bill Length", x = "Bill Length (mm)", y = "Flipper Length (mm)") +
+  theme_minimal()
+
+ggsave("scatterplot_penguins.png")
+```
 
